@@ -21,9 +21,6 @@ html = request.urlopen(url).read().decode('utf8')
 soup = BeautifulSoup(html, 'html.parser')
 title = soup.find('title')
 
-"""print(title) # Prints the tag
-print(title.string) # Prints the tag string content"""
-
 data += title
 
 time += soup.find('time').text
